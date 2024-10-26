@@ -46,8 +46,9 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
-
+    font-weight: 500;
 }
+
 nav ul li a::after{
      content: '';
      width: 0;
@@ -73,13 +74,15 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     color: #ff004f;
+    width: 100px;
+    
 }
 .collage{
-    color: #14e039;
+    color: #0dbace;
 }
 .course{
-color: bisque;
-
+color: rgb(220, 152, 18);
+font-size:22px;
 }
 /*---------------about------------*/
 #about{
@@ -276,11 +279,21 @@ nav .fa-solid{
     #header{
     background-image: url(images/phonephoto4.png);   
 }
+img{
+  margin-bottom: 20px;
+}
+.btn.btn2{
+    font-size: 15px;
+}
 
 .header-text{
     margin-top: 100%;
     font-size: 17px;
 
+}
+
+.header-text a{
+    font-size: 14px;
 }
 .header-text h1{
     font-size: 30px;
@@ -340,6 +353,7 @@ nav ul li{
     display: block;
 
 }
+
     
 
 
