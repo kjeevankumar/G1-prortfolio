@@ -277,10 +277,7 @@ nav .fa-solid{
 }
 @media only screen and (max-width:600px){
     #header{
-    background-image: url(images/phonephoto4.png);   
-}
-img{
-  margin-bottom: 30px;
+    background-image: url(images/mobilephoto00.png);   
 }
 .btn.btn2{
     font-size: 15px;
