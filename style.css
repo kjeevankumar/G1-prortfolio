@@ -21,6 +21,7 @@
     background-image: url(images/photo11.png);
     background-size: cover;
     background-position: center;
+
 }
 .container{
     padding: 10px 10%;
@@ -87,7 +88,7 @@ font-size:22px;
 /*---------------about------------*/
 #about{
     padding:80px 0 ;
-    color:#ababab;
+    color:#ababab; 
 }
 .row{
     display: flex;
@@ -99,7 +100,22 @@ font-size:22px;
 }
 .about-col-1 img{
     width :100%;
-    border-radius: 15px;
+    border-radius: 15px; animation: animate 5s ease-in-out infinite;
+    transform: all is ease-in-out;
+
+}
+@keyframes animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40% ;
+    }
+    50%{
+        border-radius: 60% 40% 30% 70%/ 50% 60% 30% 60% ;
+
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40% ;
+
+    }
 }
 .about-col-2{
     flex-basis: 60%; 
@@ -173,6 +189,42 @@ display: block;
     border-radius: 10px;
     cursor:pointer;
     transition: background 0.5s,transform 0.5s;
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.services-list div::after,.services-list div::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent,#ff4545,#00ff99,#006aff,#ff0095,#ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px; 
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+
+
+
+}
+.services-list div::before{
+ filter:blur(1.8rem)
+ opacity(0.5);
+
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
 }
 .services-list div i{
     font-size: 50px;
@@ -220,25 +272,42 @@ display: block;
 .social-icons a :hover{
     color: #ff004f;
     transform: translateY(-5px);
+    
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #161a20;
     margin:50px auto;
     width: fit-content;
-    border: 1px solid red;
-    padding:14px 50px;
+    border: none;
+    padding:1em 2em;
     border: #fff;
-    border-radius: 6px;
+    border-radius: 1000px;
     font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: #f0f0f0;
     transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn.btn2::after{
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 1000px;
+    background-image:linear-gradient(to bottom right ,#008cff85,#e100ffbb);
+    z-index: -1;
+
 }
 .btn.btn2:hover{
-    color:black;
-    transform: translateY(-3px);
+    z-index: 0;
+    box-shadow: 40px 0 100px #008cff,-40px 0 100px #e100ff;
+
 }
 .contact-right form{
    width: 100%;
